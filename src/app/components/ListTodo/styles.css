@@ -1,0 +1,50 @@
+/* .container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+} */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  place-items: center;
+  border: 2px solid;
+}
+
+.todo-list {
+    margin: 10px;
+    background-color: aquamarine;
+}
+
+.todo-list input {
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+}
+
+.todo-list button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.todo-list-items {
+  flex: auto;
+  flex-direction: row;
+  margin: 10px, 10px;
+  background-color: blue;
+  gap: 5px;
+  padding: 10px;
+}
+
+.todo-list li {
+  flex-wrap: nowrap;
+}
+
+.todo-checkbox {
+  height: auto;
+  width: auto;
+}
