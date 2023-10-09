@@ -53,16 +53,19 @@ export default class ListTodo extends Component {
       <div>
         <div className="container">
           <div className='todo-list'>
-            <input
-              type="text"
-              placeholder="Digite uma tarefa"
-              value={this.state.todoText}
-              onChange={this.handleInputChange}
-            />
-            <button onClick={this.handleCreateTodo}>Adicionar</button>
+            <div className="todo-input">
+              <input
+                type="text"
+                placeholder="Digite uma tarefa"
+                value={this.state.todoText}
+                onChange={this.handleInputChange}
+              />
+              <button onClick={this.handleCreateTodo}>+</button>
+            </div>
             <ul className='todo-list-items'>
               {this.state.todos.map((todo, index) => (
-                <li key={index}>
+                <li key={index} className={todo.complete ? 'complete' : ''}>
+                  
                   {todo.text}
 
                   <input
